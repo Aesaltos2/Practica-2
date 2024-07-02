@@ -1,0 +1,74 @@
+:root{
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body{
+  font-size: 15px;
+  font-family: 'Poppins';
+  background-color: var(--very-light-gray);
+  color: var(--very-dark-blue);
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  margin-inline: min(1em, auto);
+  border-block-start: .25em solid var(--border-color, var(--red));
+  padding: 1em;
+  box-shadow: 1px 6px 10px 1px rgba(0,0,0,0.51);
+  border-radius: .25rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.card figure{
+  max-width: 3rem;
+  align-self: flex-end;
+  margin: 1em;
+}
+
+.supervisor{
+  --border-color: var(--cyan);
+}
+
+.teambuilder{
+  --border-color: var(--red);
+}
+
+.karma{
+  --border-color: var(--orange);
+}
+
+.calculator{
+  --border-color: var(--blue);
+}
+
+@media screen and (min-width: 50rem){
+  .supervisor, .calculator{
+      grid-row: 2 / span 2;
+  }
+  .supervisor{
+      grid-column: 1;
+  }
+  .calculator{
+      grid-column-end: -1;
+  }
+
+  .karma, .teambuilder{
+      grid-column: 2;
+      grid-row: span 2;
+  }
+}
+
+.title{
+  font-size: 1.5em;
+  font-weight: 600;
+}

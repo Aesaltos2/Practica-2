@@ -1,0 +1,6 @@
+main > p{
+    font-weight: 200;
+    max-inline-size: 60ch;
+    margin-inline: auto;
+    text-align: center;
+  }
